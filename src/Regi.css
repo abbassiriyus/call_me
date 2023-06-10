@@ -1,0 +1,115 @@
+.avto{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .avtodiv{
+    width: 450px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    box-shadow: 0px 50px 100px rgba(20, 114, 186, 0.16);
+  }
+  .img1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  .img1 h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: right;
+    color: #000000;
+  }
+  .avto input{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #939393;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  .but{
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 50px; */
+  }
+  .but button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    background: #2C358F;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    margin-left: 7%;
+  }
+  .but2{
+    width: 120px;
+    padding-left: 20px;
+    
+  }
+  .but2 p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .but2 a{
+    text-decoration: none;
+  }
+  .but2 span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .div_bottom{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2C358F;
+    padding-bottom: 0px;
+  }
+  :focus{
+    outline: none;
+  }
+  @media(max-width:460px){
+    .avtodiv{
+      width: 90%;
+    }
+  }
+  .div_bottom p{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  }
+  .div_bottom span{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #939393;
+  }
