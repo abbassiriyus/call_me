@@ -75,20 +75,35 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  border-width: 0.5px 0px;
+  border-style: dashed;
+  border-color: #e0e0e0;
 }
-.body-down {
+.accordion-button::after{
+    width: 23px;
+height: 23px;
+padding-top: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-position: 1.4px 2.5px;
+background-color: #D9D9D9;
+border-radius: 100px;
 }
 .accordion-button:not(.collapsed) {
   background-color: #fff;
-  color: #000000;
+  color: #400909;
 }
 .accordion-button p {
   font-weight: 400;
-  font-size: 20px;
+  margin-left: 10px;
   line-height: 15px;
   display: flex;
   align-items: center;
   color: #000000;
+}
+p {
+  margin: 0px;
 }
 .collapse {
   width: 100%;
