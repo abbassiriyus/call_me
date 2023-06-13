@@ -11,15 +11,14 @@ export default class burxon extends Component {
                             <img src={logo} alt="" />
                             <h1>Авторизация</h1>
                         </div>
-                        <input type="text" placeholder='Email' />
+                        <input className='input1' type="text" placeholder='Email' />
                         <input type="text" placeholder='Пароль' />
                         <div className="but">
                             <button>Войти</button>
                             <div className="but2">
                                 <p>Еще нет аккаунта?</p>
-                                <span>Регистрация</span>
+                                <p>Регистрация</p>
                             </div>
-
                         </div>
                     </div>
                     <div className="div_bottom">
