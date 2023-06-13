@@ -11,7 +11,7 @@ export default class Regi extends Component {
               <img src={logo} alt="" />
               <h1>Регистрация</h1>
             </div>
-            <input type="text" placeholder='Имя и фамилия' />
+            <input id='avto-inp' type="text" placeholder='Имя и фамилия' />
             <input type="text" placeholder='Контактный телефон' />
             <input type="text" placeholder='Название организации' />
             <input type="text" placeholder='Email' />

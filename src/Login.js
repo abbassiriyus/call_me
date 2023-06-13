@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Burxon.css';
 import logo from './img/Logo_color 1.png'
-export default class burxon extends Component {
+export default class Login extends Component {
     render() {
         return (
             <div>

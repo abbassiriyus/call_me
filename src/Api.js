@@ -9,7 +9,7 @@ import { FaRegUserCircle } from "react-icons/fa"
 import { MdOutlineMailOutline } from "react-icons/md"
 import { RxExit } from "react-icons/rx"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import V
+
 
 
 export default function Api() {
