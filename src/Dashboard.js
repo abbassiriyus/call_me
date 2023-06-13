@@ -9,10 +9,15 @@ import { BsChatLeft } from "react-icons/bs";
 import { BsTelephone } from "react-icons/bs";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { HiOutlineLogout } from "react-icons/hi";
+import { HiOutlineSearchCircle } from "react-icons/hi";
+import { HiOutlineUserCircle } from "react-icons/hi";
 import { HiOutlineCreditCard } from "react-icons/hi";
+import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineChartSquareBar } from "react-icons/hi";
 
 class Dashboard extends Component {
+    
+
   render() {
     return (
       <div>
@@ -78,7 +83,7 @@ class Dashboard extends Component {
                 </Accordion.Item>
                 <Accordion.Item eventKey="5">
                   <Accordion.Header>
-                    <BsChatLeft /> <p>Чат на сайт</p> 
+                    <BsChatLeft /> <p>Чат на сайт</p>
                   </Accordion.Header>
                   <Accordion.Body>
                     <div className="body-down">
@@ -88,7 +93,7 @@ class Dashboard extends Component {
                 </Accordion.Item>
                 <Accordion.Item eventKey="6">
                   <Accordion.Header>
-                    <HiOutlineCreditCard /> <p>Тарифы</p> 
+                    <HiOutlineCreditCard /> <p>Тарифы</p>
                   </Accordion.Header>
                   <Accordion.Body>
                     <div className="body-down">
@@ -98,7 +103,7 @@ class Dashboard extends Component {
                 </Accordion.Item>
                 <Accordion.Item eventKey="7">
                   <Accordion.Header>
-                    <GoBriefcase /> <p>Настройки</p> 
+                    <GoBriefcase /> <p>Настройки</p>
                   </Accordion.Header>
                   <Accordion.Body>
                     <div className="body-down">
@@ -108,7 +113,7 @@ class Dashboard extends Component {
                 </Accordion.Item>
                 <Accordion.Item eventKey="8">
                   <Accordion.Header>
-                    <HiOutlineLogout /> <p>Выход</p> 
+                    <HiOutlineLogout /> <p>Выход</p>
                   </Accordion.Header>
                   <Accordion.Body>
                     <div className="body-down">
@@ -119,7 +124,39 @@ class Dashboard extends Component {
               </Accordion>
             </div>
           </div>
-          <div className="right-panel"></div>
+          <div className="right-panel">
+            <div className="rp-menu">
+                <div className="rp-m-profile">
+                    <HiOutlineUserCircle className="i-user"/> 
+                    <h1>Профиль</h1>
+                </div>
+                <div className="rp-m-all">
+                    <div className="rp-m-all-inp">
+                        <input type="search" />
+                        <HiOutlineSearchCircle className="i-search" />
+                    </div>
+                    <div className="rp-m-all-all">
+                        <HiOutlineMail />
+                        <HiOutlineUserCircle /> 
+                        <p>Имя клиента</p>
+                        <HiOutlineLogout />
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div className="down-panel">
+          <div className="dp-flex">
+            <div className="dp-domen">
+              <h1>©2023 CallToCall.ru</h1>
+            </div>
+            <div className="dp-about">
+              <a href="">
+                <h1>Техподдержка</h1>
+              </a>
+              <p>Построено в Vitico.ru</p>
+            </div>
+          </div>
         </div>
       </div>
     );

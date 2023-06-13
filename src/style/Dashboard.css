@@ -6,7 +6,7 @@
 .main {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-around;
 }
 .left-panel {
@@ -14,17 +14,34 @@
   display: flex;
   height: 100vh;
   align-items: center;
-
+    overflow-y: scroll;
   flex-direction: column;
   box-shadow: 0px 50px 100px rgba(20, 114, 186, 0.16);
   background: #ffff;
 }
+::-webkit-scrollbar {
+    width: 0px;
+}
+                    
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+                    
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
 .right-panel {
   width: 100%;
+  overflow-y: scroll;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+}
+body{
+    overflow: hidden;
 }
 .l-panel-logo {
   width: 90%;
@@ -79,16 +96,16 @@
   border-style: dashed;
   border-color: #e0e0e0;
 }
-.accordion-button::after{
-    width: 23px;
-height: 23px;
-padding-top: 5px;
-display: flex;
-align-items: center;
-justify-content: center;
-background-position: 1.4px 2.5px;
-background-color: #D9D9D9;
-border-radius: 100px;
+.accordion-button::after {
+  width: 23px;
+  height: 23px;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: 1.4px 2.5px;
+  background-color: #d9d9d9;
+  border-radius: 100px;
 }
 .accordion-button:not(.collapsed) {
   background-color: #fff;
@@ -122,4 +139,161 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.down-panel {
+  width: 100%;
+  display: flex;
+  height: 66px;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: #2c358f;
+}
+.dp-flex {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dp-domen h1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  /* identical to box height */
+
+  /* app */
+
+  color: #ffffff;
+}
+.dp-about h1 {
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  /* identical to box height */
+
+  text-decoration-line: underline;
+
+  color: #939393;
+}
+.dp-about p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  /* identical to box height */
+
+  /* app */
+
+  color: #ffffff;
+}
+.dp-domen {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.dp-about {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+h1 {
+  margin: 0px;
+}
+.rp-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #ffffff;
+  /* blue_shadow */
+
+  box-shadow: 0px 50px 100px rgba(20, 114, 186, 0.16);
+}
+
+.rp-m-profile {
+  width: 20%;
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  align-items: center;
+  justify-content: left;
+}
+.rp-m-profile h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 15px;
+  /* identical to box height, or 100% */
+
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+
+  color: #000000;
+}
+.i-user {
+  font-size: 25px;
+}
+.rp-m-all {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rp-m-all-inp {
+  width: 70%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.rp-m-all-inp input {
+  height: 34px;
+  background: rgba(44, 53, 143, 0.05);
+  border: 0.5px solid rgba(44, 53, 143, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding-left: 15px;
+  border: none;
+}
+:focus {
+  outline: none;
+}
+.i-search {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 25px;
+}
+.rp-m-all-all{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.rp-m-all-all svg{
+    font-size: 25px;
+}
+@media(max-width:1100px){
+    .rp-m-all-inp {
+        width: 60%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .rp-m-all-all{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+@media(max-width:991px){
+    
 }
