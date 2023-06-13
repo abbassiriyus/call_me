@@ -27,8 +27,6 @@ export default class burxon extends Component {
                         <span>Техподдержка</span>
                     </div>
                 </div>
-
-
             </div>
         )
     }
