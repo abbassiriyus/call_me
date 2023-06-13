@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Burxon from './Burxon.js'
 import Regi from './Regi.js'
+import Api from './Api.js'
+
 function App() {
   return (
     <div className="App">
@@ -19,8 +21,9 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Burxon/>
+      {/* <Burxon/> */}
       {/* <Regi/> */}
+      <Api />
     </div>
   );
 }
