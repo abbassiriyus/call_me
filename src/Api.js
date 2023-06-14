@@ -21,10 +21,12 @@ import vector6 from './img/Vector (6).png'
 import vector7 from './img/Vector (7).png'
 import vector8 from './img/Vector (8).png'
 import vector9 from './img/Vector (9).png'
+import vector10 from './img/Vector (10).png'
 import Burxon from './Burxon.js'
 import { useState } from 'react';
 import Klient from './Klient.js'
-
+import Zvanok from './Zvanok.js'
+import Firma from './Firma.js';
 export default function Api() {
   const [ page, setPage ] = useState(0)
     return (
@@ -50,20 +52,20 @@ export default function Api() {
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
                   <Accordion.Header onClick={()=>{setPage(3)}} className='accordion'><img src={vector3} alt="" /><span>Клиенты</span></Accordion.Header>
-                  <Accordion.Body className='ac.body'>
-                    <img src={tuning} alt="" /><span>Клиент</span>
+                  <Accordion.Body onClick={()=>{setPage(6)}} className='ac.body'>
+                    <img src={vector10} alt="" /><span>Фирма</span>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
-                  <Accordion.Header className='accordion'><img src={vector4} alt="" /><span>Отчеты</span></Accordion.Header>
+                  <Accordion.Header  className='accordion'><img src={vector4} alt="" /><span>Отчеты</span></Accordion.Header>
                   <Accordion.Body className='ac.body'>
                     <img src={tuning} alt="" /><span>Настройка</span>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
-                  <Accordion.Header className='accordion'><img src={vector5} alt="" /><span>Обратный звонок</span></Accordion.Header>
+                  <Accordion.Header  onClick={()=>{setPage(5)}}className='accordion'><img src={vector5} alt="" /><span>Обратный звонок</span></Accordion.Header>
                   <Accordion.Body className='ac.body'>
-                    <img src={tuning} alt="" /><span>Настройка</span>
+                    <img src={tuning} alt="" /><span>Клиент</span>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="5">
@@ -114,11 +116,17 @@ export default function Api() {
                         </Container>
                     </Navbar>
                     <div className="klm">
-                    { page===1?(<Burxon/>):(page===2?<Regi/>:(page===3?<Klient/>:(<div>dadd</div>)))}
+                      
+                    { page===1?(<Burxon/>):(page===2?<Regi/>:(page===3?<Klient/>:(page===5?<Zvanok/>:(page===6?<Firma/>:(<div>sa</div>)))))}
                     </div>
+                    
                 </div>
+                <div className="div_bottom">
+          <p>©2023 CallToCall.ru</p>
+          <span>Техподдержка</span>
+          </div>
             </div>
-        // </div>
+        
     );
 }
 

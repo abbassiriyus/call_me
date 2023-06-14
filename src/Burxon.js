@@ -21,10 +21,7 @@ export default class burxon extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="div_bottom">
-                        <p>©2023 CallToCall.ru</p>
-                        <span>Техподдержка</span>
-                    </div>
+                  
                 </div>
             </div>
         )

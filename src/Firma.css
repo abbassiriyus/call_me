@@ -1,0 +1,312 @@
+.klm{
+    display: block;
+}
+.firmadiv{
+    width: 50%;
+    height: 700px;
+    background-color: #1472BA;
+    background: linear-gradient(180deg, #2C358F 0%, #1472BA 100%);
+    box-shadow: 5px 0px 50px #FFFFFF;
+    border-radius: 8px;
+
+}
+.firma1{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+    align-items: center;
+    
+}
+.firma1 h1{
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 15px;
+    color: #F2F2F2;
+}
+.firma1 button{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 130%;
+    color: #FFFFFF;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0);
+}
+.line{
+    border: 1px dashed #F2F2F2;
+    width: 90%;
+    margin: auto;
+}
+.line1{
+    width: 28px;
+    height: 0px;
+    border: 1px dashed #FFFFFF;
+    transform: rotate(90deg);
+    justify-content: center;
+}
+.line2{
+    width: 1px;
+    height: 28px;
+    border: 1px dashed #FFFFFF;
+    margin-left: 8px;
+    justify-content: center;
+}
+.firma2{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+.firma2 input{
+    margin-left: 10px;
+    background-color: #1472ba00 ;
+    color: white ;
+}
+.firma2 h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.firma2 button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 25px;
+    margin-top: -10px;
+    margin-left: 20px;
+
+}
+.firma3 input{
+    margin-left: 10px;
+    background-color: #1472ba00 ;
+    color: white ;
+}
+.firma3{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+.firma3 h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.firma3 button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 25px;
+    margin-top: -10px;
+    margin-left: 40px;
+
+}
+.firma3 input{
+    margin-left: 10px;
+    background-color: #1472ba00 ;
+    color: white ;
+    padding-top: 10px;
+}
+.firma4{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+.firma4 h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.firma4 button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 25px;
+    margin-top: -10px;
+    margin-left: 120px;
+}
+.firma4 input{
+    margin-left: 10px;
+    background-color: #1472ba00 ;
+    color: white ;
+}
+.firma5{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+.firma5 h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.firma5 button{
+    border: none;
+    background-color: #1472ba00 ;
+    color: white;
+    font-size: 25px;
+    margin-top: -10px;
+    margin-left: 90px;
+
+}
+.firma5 input{
+    margin-left: 10px;
+    background-color: #1472ba00 ;
+    color: white ;
+}
+.firma6{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+.firma6 h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.firma6 button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 25px;
+    margin-top: -10px;
+    margin-left: 65px;
+
+}
+.firma6 input{
+    margin-left: 10px;
+    background-color: #1472ba00 ;
+    color: white ;
+}
+.firma7{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+.firma7 h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.firma7 button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 25px;
+    margin-top: -10px;
+    margin-left: 63px;
+
+}
+.firma7 input{
+    margin-left: 10px;
+    background-color: #1472ba00 ;
+    color: white ;
+}
+.firma_butt1{
+    width: 120px;
+    height: 30px;
+    background: #2C358F;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+}
+.firma_butt2{
+    width: 120px;
+    height: 30px;
+    background-color: white;
+    color: #2C358F;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* text-align: center; */
+    border: none;
+    border-radius: 8px;
+    margin-left: 15px;
+}
+.firma_div{
+    display: flex;
+    margin-top:190px;
+    margin-left: 220px;
+}
+.firmabottom{
+    display: flex;
+    width:95%;
+    height: 100px;
+    align-items: center;
+    margin: auto;
+    padding: 10px 10px 10px 20px;
+    background: #94FFE5;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.bottom2{
+    display: block;
+    text-align: left;
+    
+    border-radius: 8px;
+}
+.bottom2 p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    height: 5px;
+}
+.bottom2 span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000; 
+    padding-top: -20px !important;
+}
+.icon{
+    font-size: 80px;
+    font-weight: 900;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+.inputPlace {
+    /* width: 70%; */
+    border: none;
+}
+
+.inputPlace::placeholder{
+    color: white;
+}
