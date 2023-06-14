@@ -1,37 +1,97 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
+// import './Regi.css';
+// import logo from './img/Logo_color 1.png'
+// export default class Regi extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <div className="avto">
+//           <div className="avtodiv">
+//             <div className="img1">
+//               <img src={logo} alt="" />
+//               <h1>Регистрация</h1>
+//             </div>
+//             <input className='input1' type="text" placeholder='Имя и фамилия' />
+//             <input id='avto-inp' type="text" placeholder='Имя и фамилия' />
+//             <input type="text" placeholder='Контактный телефон' />
+//             <input type="text" placeholder='Название организации' />
+//             <input type="text" placeholder='Email' />
+//             <input type="text" placeholder='Пароль' />
+
+//             <div className="but">
+//                  <button>Войти</button>
+//                  <div className="but2">
+//                      <p>Еще нет аккаунта?</p>
+//                      <p>Регистрация</p>
+//                  </div>
+//              </div>
+//           </div>
+
+//         </div>
+//       </div>
+//     )
+//   }
+// }
+
+import React, { useState } from 'react';
+import axios from 'axios';
 import './Regi.css';
+import Host from './host'
 import logo from './img/Logo_color 1.png'
-export default class Regi extends Component {
-  render() {
-    return (
-      <div>
-        <div className="avto">
-          <div className="avtodiv">
-            <div className="img1">
-              <img src={logo} alt="" />
-              <h1>Регистрация</h1>
-            </div>
-<<<<<<< HEAD:src/Regi.js
-            <input className='input1' type="text" placeholder='Имя и фамилия' />
-=======
-            <input id='avto-inp' type="text" placeholder='Имя и фамилия' />
->>>>>>> bc599deb5f57e66932e2c41d2f6f59be3af1bacf:src/Signup.js
-            <input type="text" placeholder='Контактный телефон' />
+
+function Signup() {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(`https://calltocall.onrender.com/auth/register/`, {
+        username,
+        email,
+        password,
+        phone,
+      });
+
+      console.log('SignUp successful:', response.username);
+      // Дополнительная обработка после успешной регистрации
+    } catch (error) {
+      console.error('Error signing up:', error.response.data);
+      // Обработка ошибки регистрации
+    }
+  };
+
+  return (
+    <div>
+      <div className="avto">
+        <div className="avtodiv">
+          <div className="img1">
+            <img src={logo} alt="" />
+            <h1>Регистрация</h1>
+          </div>
+          <form onSubmit={handleSubmit}>
+            <input onChange={(e) => setUsername(e.target.value)} className='input1' type="text" placeholder='Имя и фамилия' />
+            <input onChange={(e) => setPhone(e.target.value)} type="text" placeholder='Контактный телефон' />
             <input type="text" placeholder='Название организации' />
-            <input type="text" placeholder='Email' />
-            <input type="text" placeholder='Пароль' />
+            <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Email' />
+            <input onChange={(e) => setPassword(e.target.value)} type="text" placeholder='Пароль' />
 
             <div className="but">
-                 <button>Войти</button>
-                 <div className="but2">
-                     <p>Еще нет аккаунта?</p>
-                     <p>Регистрация</p>
-                 </div>
-             </div>
-          </div>
-         
+              <button>Войти</button>
+              <div className="but2">
+                <p>Еще нет аккаунта?</p>
+                <p>Регистрация</p>
+              </div>
+            </div>
+          </form>
         </div>
+
       </div>
-    )
-  }
+    </div >
+  );
 }
+
+export default Signup;

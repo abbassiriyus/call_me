@@ -1,5 +1,5 @@
 import Table from 'react-bootstrap/Table';
-import './Klient.css'
+import './klient.css'
 import {CiCircleAlert} from 'react-icons/ci'
 function BasicExample() {
   return (

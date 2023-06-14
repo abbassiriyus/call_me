@@ -1,5 +1,5 @@
 import Table from 'react-bootstrap/Table';
-import './Klient.css'
+import './klient.css'
 function BasicExample() {
   return (
    <div className="klm1">
