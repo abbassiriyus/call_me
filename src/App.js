@@ -1,29 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import Burxon from './Burxon.js'
-import Regi from './Regi.js'
-import Api from './Api.js'
+import logo from "./logo.svg";
+import "./App.css";
+import Login from "./Login";
+import SignUp from "./Signup";
+import Api from "./Api";
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import Dashboard from "./Dashboard";
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      {/* <Burxon/> */}
-      {/* <Regi/> */}
-      <Api />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" Component={Login} />
+          <Route path="/signup" Component={SignUp} />
+          <Route path="/api" Component={Api} />
+          <Route path="/dashboard" Component={Dashboard} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
