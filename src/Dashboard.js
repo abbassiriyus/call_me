@@ -14,11 +14,27 @@ import { HiOutlineUserCircle } from "react-icons/hi";
 import { HiOutlineCreditCard } from "react-icons/hi";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineChartSquareBar } from "react-icons/hi";
+import axios from "axios";
 
 class Dashboard extends Component {
-    
+  state = {
+    data: [],
+  };
+
+  componentDidMount() {
+    axios.get('https://calltocall.onrender.com/auth/users/')
+      .then(response => {
+        this.setState({ data: response.data });
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }
+
 
   render() {
+    const { data } = this.state;
+
     return (
       <div>
         <div className="main">
@@ -126,22 +142,24 @@ class Dashboard extends Component {
           </div>
           <div className="right-panel">
             <div className="rp-menu">
-                <div className="rp-m-profile">
-                    <HiOutlineUserCircle className="i-user"/> 
-                    <h1>Профиль</h1>
+              <div className="rp-m-profile">
+                <HiOutlineUserCircle className="i-user" />
+                <h1>Профиль</h1>
+              </div>
+              <div className="rp-m-all">
+                <div className="rp-m-all-inp">
+                  <input type="search" />
+                  <HiOutlineSearchCircle className="i-search" />
                 </div>
-                <div className="rp-m-all">
-                    <div className="rp-m-all-inp">
-                        <input type="search" />
-                        <HiOutlineSearchCircle className="i-search" />
-                    </div>
-                    <div className="rp-m-all-all">
-                        <HiOutlineMail />
-                        <HiOutlineUserCircle /> 
-                        <p>Имя клиента</p>
-                        <HiOutlineLogout />
-                    </div>
+                <div className="rp-m-all-all">
+                  <HiOutlineMail />
+                  <HiOutlineUserCircle />
+                  {data.map(item => {
+                    <p>{item.first_name}</p>
+                  })}
+                  <HiOutlineLogout />
                 </div>
+              </div>
             </div>
           </div>
         </div>
