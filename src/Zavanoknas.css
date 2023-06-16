@@ -1,0 +1,41 @@
+.firma2 p{
+    color: white;
+}
+.line1a{
+    width: 28px;
+    height: 0px;
+    border: 1px dashed #FFFFFF;
+    transform: rotate(90deg);
+    justify-content: center;
+    margin-left: 120px;
+}
+.firma3 button{
+    margin-left: 115px !important;
+}
+.firma4 button{
+    margin-left: 95px !important;
+}
+.firma5 button{
+    margin-left: 105px !important;
+}
+.firma6 button{
+    margin-left: 65px !important;
+}
+.firma7 button{
+    margin-left: 95px !important;
+}
+.firma3 p{
+    color: white;
+}
+.firma4 p{
+    color: white;
+}
+.firma5 p{
+    color: white;
+}
+.firma6 p{
+    color: white;
+}
+.firma7 p{
+    color: white;
+}

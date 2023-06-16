@@ -1,12 +1,38 @@
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { FaRegUserCircle } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { RxExit } from "react-icons/rx";
 import React, { Component } from 'react'
 import {CiCirclePlus} from 'react-icons/ci'
+import './Zavanoknas.css'
 import './Firma.css'
+import firma from './img/Vector (10).png'
 import {CiCircleAlert} from 'react-icons/ci'
 export default class Firma extends Component {
   render() {
     return (
         <div>
-
+          <Navbar className='navbarbig' expand="lg">
+                    <Container fluid>
+                      <Navbar.Brand href="#" className='navbar2'> 
+                      <img src={firma} alt="" /> <h1>Фирма</h1>
+                      </Navbar.Brand>
+                      <Navbar.Toggle aria-controls="navbarScroll" />
+                      <Navbar.Collapse id="navbarScroll">
+                        <Nav className='nav1'>
+                          <input type="text" className='input' />
+                          <div className="nav2">
+                            <MdOutlineMailOutline className="nav2icon" />
+                            <FaRegUserCircle className="nav2icon" />
+                            <p>imya-kliyenta</p>
+                            <RxExit className="nav2icon" />
+                          </div>
+                        </Nav>
+                      </Navbar.Collapse>
+                    </Container>
+                  </Navbar>
       <div className='klm1'>
         <div className="firmadiv">
         <div className="firma1">
