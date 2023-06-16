@@ -188,11 +188,11 @@ body{
 }
 .klm1 {
   width: 95%;
+  /* height:900px; */
   display: flex;
   margin: auto;
   padding-top: 2%;
   background-color: white;
-
 }
 
 .div_bottom {

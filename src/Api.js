@@ -23,10 +23,13 @@ import vector6 from "./img/Vector (6).png";
 import vector7 from "./img/Vector (7).png";
 import vector8 from "./img/Vector (8).png";
 import vector9 from "./img/Vector (9).png";
+import firma from './img/Vector (10).png'
+import vector13 from './img/Vector (13).png';
 import Burxon from "./Login.js";
 import { useState } from "react";
 import Klient from "./Klient.js";
-// import Zavnoknastroyki from './Zvanoknastroyki.js';
+import Zavnoknastroyki from './Zvanoknastroyki.js';
+
 export default function Api() {
   function navbar(){
     document.querySelector(".navbarbig").style="display:none"
@@ -43,7 +46,6 @@ export default function Api() {
           </h1>
         </div>
         <div  className="card-1">
-          {/* <img src={logo} alt="" className="logo" /> */}
           <div onClick={navbar} className="desktop">
             <Accordion defaultActiveKey="0" flush>
               <Accordion.Item eventKey="0">
@@ -87,7 +89,7 @@ export default function Api() {
                   <span>Клиенты</span>
                 </Accordion.Header>
                 <Accordion.Body onClick={() => {setPage(4)}} className="ac.body">
-                  <img src={tuning} alt="" />
+                <img src={firma} alt="" />
                   <span>Фирма</span>
                 </Accordion.Body>
               </Accordion.Item>
@@ -109,7 +111,7 @@ export default function Api() {
                   <span>Обратный звонок</span>
                 </Accordion.Header>
                 <Accordion.Body onClick={()=>{setPage(6)}} className="ac.body">
-                  <img src={tuning} alt="" />
+                  <img src={vector13} alt="" />
                   <span>Настройка</span>
                 </Accordion.Body>
               </Accordion.Item>
@@ -180,7 +182,7 @@ export default function Api() {
                       </Navbar.Collapse>
                     </Container>
                   </Navbar>
-                    {page === 1 ? (<Burxon />) : (page === 2 ? <Regi /> : (page === 3 ? <Klient /> : (page === 5 ? <Zvanok /> : (page === 4 ? <Firma /> :(page===6? <div>sa</div> :(<div>sa</div>))))))}
+                    {page === 1 ? (<Burxon />) : (page === 2 ? <Regi /> : (page === 3 ? <Klient /> : (page === 5 ? <Zvanok /> : (page === 4 ? <Firma /> :(page===6? <Zavnoknastroyki/>:(<div></div>))))))}
                   </div>
                 </div>
                 <div className="div_bottom">

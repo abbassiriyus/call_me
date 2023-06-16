@@ -11,9 +11,12 @@ import './Firma.css'
 import firma from './img/Vector (10).png'
 import {CiCircleAlert} from 'react-icons/ci'
 export default class Firma extends Component {
+zakroy1=()=>{
+  document.querySelector(".firmabig").style="display:none"
+}
   render() {
     return (
-        <div>
+        <div className="firmabig">
           <Navbar className='navbarbig' expand="lg">
                     <Container fluid>
                       <Navbar.Brand href="#" className='navbar2'> 
@@ -40,27 +43,27 @@ export default class Firma extends Component {
         </div>
         <div className="line"></div>
         <div className="firma2">
-            <h1>Рабочий телефон</h1><button><CiCirclePlus/></button><div className="line1"></div><input className='inputPlace' type="text"placeholder='+7 999 888 77 66' />
+            <h1>Рабочий телефон</h1><button><CiCirclePlus/></button><div className="line1"></div><p>+7 999 888 77 66</p>
         </div>
         <div className="firma3">
-            <h1>Рабочий E-mail</h1><button><CiCirclePlus/></button><div className="line1"></div><input className='inputPlace' type="text" placeholder='mymail@pochta.com'/>
+            <h1>Рабочий E-mail</h1><button><CiCirclePlus/></button><div className="line1"></div><p>mymail@pochta.com</p>
         </div>
         <div className="firma4">
-            <h1>Сайт</h1><button><CiCirclePlus/></button><div className="line1"></div><input className='inputPlace' type="text"placeholder='vk.com/id32450354' />
+            <h1>Сайт</h1><button><CiCirclePlus/></button><div className="line1"></div><p>vk.com/id32450354</p>
         </div>
         <div className="line"></div>
         <div className="firma5">
-            <h1>Соц сети</h1><button><CiCirclePlus/></button><div className="line1"></div><input className='inputPlace' type="text"placeholder='ООО АРТГЕНТ' />
+            <h1>Соц сети</h1><button><CiCirclePlus/></button><div className="line1"></div><p>ООО АРТГЕНТ</p>
         </div>
         <div className="firma6">
-            <h1>Ген Контакт</h1><button><CiCirclePlus/></button><div className="line1"></div><input className='inputPlace' type="text" placeholder='+7 999 888 77 66'/>
+            <h1>Ген Контакт</h1><button><CiCirclePlus/></button><div className="line1"></div><p>+7 999 888 77 66</p>
         </div>
         <div className="line"></div>
         <div className="firma7">
-            <h1>Примечание</h1><button><CiCirclePlus/></button><div className="line2"></div><input className='inputPlace' type="text" placeholder='Тут может быть большой текст. Менеджеры могут писать сюда всю полезную и интересуную информацию о клиенте.' />
+            <h1>Примечание</h1><button><CiCirclePlus/></button><div className="line2"></div><p>Тут может быть большой текст. Менеджеры могут писать сюда всю полезную и интересуную информацию о клиенте.</p>
         </div>
         <div className="firma_div">
-        <button className='firma_butt1'>Редактировать</button><button className='firma_butt2'>Закрыть</button>
+        <button className='firma_butt1'>Редактировать</button><button onClick={()=>this.zakroy1()} className='firma_butt2'>Закрыть</button>
         </div>
         </div>
       </div>
