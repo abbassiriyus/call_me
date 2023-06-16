@@ -40,6 +40,9 @@ import Host from './host'
 import logo from './img/Logo_color 1.png'
 
 function Signup() {
+  function sign(){
+    window.location= '/';
+  }
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -56,14 +59,15 @@ function Signup() {
         phone,
       });
 
-      console.log('SignUp successful:', response.username);
+      console.log('SignUp successful:', response.data);
       // Дополнительная обработка после успешной регистрации
     } catch (error) {
       console.error('Error signing up:', error.response.data);
       // Обработка ошибки регистрации
     }
+    console.log(response.data);
   };
-
+  
   return (
     <div>
       <div className="avto">
@@ -80,10 +84,10 @@ function Signup() {
             <input onChange={(e) => setPassword(e.target.value)} type="text" placeholder='Пароль' />
 
             <div className="but">
-              <button>Войти</button>
+              <button>Зарегестрир <br /> оваться</button>
               <div className="but2">
-                <p>Еще нет аккаунта?</p>
-                <p>Регистрация</p>
+                <p style={{marginTop:'-10px'}}>Есть аккаунт?</p>
+                <p style={{cursor:'pointer', marginTop:'15px'}} onClick={sign}>Вход</p>
               </div>
             </div>
           </form>
