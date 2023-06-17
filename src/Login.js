@@ -9,7 +9,7 @@ function Login() {
     window.location = '/signup';
   }
 
-  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
@@ -19,15 +19,18 @@ function Login() {
       const response = await axios.post(
         `https://calltocall.onrender.com/auth/login/`,
         {
-          phone,
+          email,
           password,
         }
       );
-
+      
+      
+      window.location = '/dashboard';
       console.log("SignIn successful:", response.data);
       // Дополнительная обработка после успешного входа
     } catch (error) {
       console.error("Error signing in:", error.response.data);
+      alert('Ошибка при регестрации')
       // Обработка ошибки входа
     }
   };
@@ -42,7 +45,7 @@ function Login() {
           </div>
           <form onSubmit={handleSubmit}>
             <input
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               className="input1"
               type="text"
               placeholder="Email"

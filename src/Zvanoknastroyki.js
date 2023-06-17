@@ -5,7 +5,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RxExit } from "react-icons/rx";
 import React from 'react'
-import './Klient.css'
+import './klient.css'
 import { CiCirclePlus } from 'react-icons/ci'
 export default function Zvanoknastroyki() {
     function zakroy(){

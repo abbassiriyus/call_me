@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RxExit } from "react-icons/rx";
-import './Klient.css'
+import './klient.css'
 import Table from 'react-bootstrap/Table';
 import {CiCircleAlert} from 'react-icons/ci'
 function BasicExample() { 

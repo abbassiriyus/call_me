@@ -6,7 +6,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { RxExit } from "react-icons/rx";
 import Table from 'react-bootstrap/Table';
 import vector from './img/Vector (2).png' 
-import './Klient.css'
+import './klient.css'
 function BasicExample() {
   return (
     <div>
