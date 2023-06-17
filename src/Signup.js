@@ -58,8 +58,9 @@ function Signup() {
         password,
         phone,
       });
-      alert('Зарегистрирована успешно')
+      alert('Пройдите верефикатцию')
       console.log('SignUp successful:', response.data);
+      window.location='/verefication'
       // Дополнительная обработка после успешной регистрации
     } catch (error) {
       console.error('Error signing up:', error.response.data);
@@ -78,10 +79,10 @@ function Signup() {
           </div>
           <form onSubmit={handleSubmit}>
             <input onChange={(e) => setUsername(e.target.value)} className='input1' type="text" placeholder='Имя и фамилия' />
-            <input onChange={(e) => setPhone(e.target.value)} type="text" placeholder='Контактный телефон' />
+            <input onChange={(e) => setPhone(e.target.value)} type="number" placeholder='Контактный телефон' />
             <input type="text" placeholder='Название организации' />
             <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Email' />
-            <input onChange={(e) => setPassword(e.target.value)} type="text" placeholder='Пароль' />
+            <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Пароль' />
 
             <div className="but">
               <button>Зарегестрир <br /> оваться</button>
