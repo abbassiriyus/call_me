@@ -279,6 +279,9 @@ h1 {
 .rp-m-all-all svg{
     font-size: 25px;
 }
+.rp-btn{
+  display: none;
+}
 @media(max-width:1100px){
     .rp-m-all-inp {
         width: 60%;
@@ -295,5 +298,30 @@ h1 {
     }
 }
 @media(max-width:991px){
+    .left-panel{
+      display: flex;
+      position: absolute;
+      left: -500px;
     
+    }
+    .right-panel{
+      width: 100%;
+    }
+    .rp-btn{
+      display: flex;
+      width: 100px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+    .down-panel{
+      z-index: 100;
+    }
+    .closemenu{
+      display: none;
+      position: absolute;
+      right: 30px;
+      font-size: 30px;
+      top: 50px;
+    }
 }

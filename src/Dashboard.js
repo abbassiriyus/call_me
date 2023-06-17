@@ -14,6 +14,9 @@ import { HiOutlineUserCircle } from "react-icons/hi";
 import { HiOutlineCreditCard } from "react-icons/hi";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineChartSquareBar } from "react-icons/hi";
+import { FiSettings } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineBars } from "react-icons/ai";
 import axios from "axios";
 
 class Dashboard extends Component {
@@ -22,18 +25,28 @@ class Dashboard extends Component {
   };
 
   componentDidMount() {
-    axios.get('https://calltocall.onrender.com/auth/users/')
-      .then(response => {
+    axios
+      .get("https://calltocall.onrender.com/auth/users/")
+      .then((response) => {
         this.setState({ data: response.data });
       })
-      .catch(error => {
-        console.error('Error fetching data:', error);
+      .catch((error) => {
+        console.error("Error fetching data:", error);
       });
   }
 
-
   render() {
     const { data } = this.state;
+    function menuop() {
+      document.querySelector(".left-panel").style =
+        "display: flex; position: absolute; top: 0; left: 0; z-index:10; transition: .7s";
+        document.querySelector(".closemenu").style = "display: flex"
+    }
+    function menucl() {
+          document.querySelector(".left-panel").style =
+            "display: flex; position: absolute; top: 0; left: -500; z-index:10; transition: .7s";
+            document.querySelector(".closemenu").style = "display: none"
+        }
 
     return (
       <div>
@@ -93,7 +106,7 @@ class Dashboard extends Component {
                   </Accordion.Header>
                   <Accordion.Body>
                     <div className="body-down">
-                      <CiSaveDown2 /> Настройки
+                      <FiSettings /> Настройки
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -142,6 +155,10 @@ class Dashboard extends Component {
           </div>
           <div className="right-panel">
             <div className="rp-menu">
+              <div className="rp-btn">
+                <AiOutlineBars style={{fontSize: '30px'}} onClick={menuop}/>
+              </div>
+              <AiOutlineClose onClick={menucl} className="closemenu" />
               <div className="rp-m-profile">
                 <HiOutlineUserCircle className="i-user" />
                 <h1>Профиль</h1>
@@ -154,8 +171,8 @@ class Dashboard extends Component {
                 <div className="rp-m-all-all">
                   <HiOutlineMail />
                   <HiOutlineUserCircle />
-                  {data.map(item => {
-                    <p>{item.first_name}</p>
+                  {data.map((item) => {
+                    <p>{item.first_name}</p>;
                   })}
                   <HiOutlineLogout />
                 </div>
@@ -163,6 +180,7 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
+        {/* {page === 1 ? (<Burxon />) : (<div></div>)} */}
         <div className="down-panel">
           <div className="dp-flex">
             <div className="dp-domen">
