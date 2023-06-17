@@ -58,14 +58,14 @@ function Signup() {
         password,
         phone,
       });
-
+      alert('Зарегистрирована успешно')
       console.log('SignUp successful:', response.data);
       // Дополнительная обработка после успешной регистрации
     } catch (error) {
       console.error('Error signing up:', error.response.data);
+      alert('Проверьте данные и попробуйте еще раз')
       // Обработка ошибки регистрации
     }
-    console.log(response.data);
   };
   
   return (

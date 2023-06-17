@@ -15,6 +15,7 @@
   height: 100vh;
   align-items: center;
     overflow-y: scroll;
+    padding-bottom: 100px;
   flex-direction: column;
   box-shadow: 0px 50px 100px rgba(20, 114, 186, 0.16);
   background: #ffff;
@@ -297,6 +298,9 @@ h1 {
         justify-content: space-around;
     }
 }
+.closemenu{
+  display: none;
+}
 @media(max-width:991px){
     .left-panel{
       display: flex;
@@ -324,4 +328,69 @@ h1 {
       font-size: 30px;
       top: 50px;
     }
+    .i-user {
+      font-size: 30px;
+  }
+}
+@media(max-width:800px){
+  .i-user {
+   display: none;
+}
+.rp-m-profile{
+  padding: 0px;
+
+}
+}
+@media(max-width:600px){
+  .rp-m-profile{
+    padding: 0px;
+    display: none;
+  } 
+}
+@media(max-width:400px){
+  .dp-domen h1 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #ffffff;
+}
+.dp-about p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #ffffff;
+} 
+.dp-about h1 {
+    margin-right: 20px;
+    font-weight: 400;
+    margin: 0px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 15px;
+    text-decoration-line: underline;
+    color: #939393;
+}
+.i-search{
+  right: 10px;
+}
+.closemenu{
+  right: 20px;
+}
+.dp-about{
+  flex-direction: column;
+  text-align: center;
+}
+
+}
+.rp-vvod{
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  padding-top: 10px;
+  background-color: #FFF ;
+  padding-bottom: 10px;
+}
+.body-down{
+  cursor: pointer;
 }
