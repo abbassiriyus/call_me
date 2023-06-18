@@ -5,6 +5,7 @@ import SignUp from "./Signup";
 import Api from "./Api";
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard";
+import Verification from "./Verification";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={Login} />
+          <Route path="/verefication" Component={Verification}/>
           <Route path="/signup" Component={SignUp} />
           <Route path="/api" Component={Api} />
           <Route path="/dashboard" Component={Dashboard} />

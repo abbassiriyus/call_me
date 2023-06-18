@@ -11,6 +11,7 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [tokens, setTokens] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,14 +24,22 @@ function Login() {
           password,
         }
       );
+      const userData = response.data;
+      console.log(userData);
+      
+      
+      // setEmail(userData.email)
+      // setPassword(userData.password)
+
       
       
       window.location = '/dashboard';
       console.log("SignIn successful:", response.data);
+      alert('Вход успешно выволнена')
       // Дополнительная обработка после успешного входа
     } catch (error) {
       console.error("Error signing in:", error.response.data);
-      alert('Ошибка при регестрации')
+      alert('Ошибка при входе')
       // Обработка ошибки входа
     }
   };
