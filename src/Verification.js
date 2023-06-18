@@ -6,7 +6,7 @@ import VerificationInput from "react-verification-input";
 const Verification = () => {
     return (
         <div>
-          <div className="main">
+          <div className="main2">
             <div className="main-center">
                 <div className="mc-img">
                     <img src={logo} alt="" />

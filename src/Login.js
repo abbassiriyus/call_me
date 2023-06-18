@@ -26,6 +26,9 @@ function Login() {
       );
       const userData = response.data;
       console.log(userData);
+      const token = userData.access;
+      console.log(token);
+      localStorage.setItem(token, userData);
       
       
       // setEmail(userData.email)
