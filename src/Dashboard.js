@@ -158,7 +158,7 @@ class Dashboard extends Component {
               <div className="rp-btn">
                 <AiOutlineBars style={{fontSize: '30px'}} onClick={menuop}/>
               </div>
-              <AiOutlineClose onClick={menucl} className="closemenu" />
+              <AiOutlineClose id="menucl" onClick={menucl} style={{display:'none'}} className="closemenu" />
               <div className="rp-m-profile">
                 <HiOutlineUserCircle className="i-user" />
                 <h1>Профиль</h1>

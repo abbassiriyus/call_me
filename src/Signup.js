@@ -65,7 +65,7 @@ function Signup() {
       console.error('Error signing up:', error.response.data);
       // Обработка ошибки регистрации
     }
-    console.log(response.data);
+    
   };
   
   return (
