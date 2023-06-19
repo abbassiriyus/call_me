@@ -64,8 +64,9 @@
     color: white;
 }
 .firmadiv1{
-    width: 50%;
-    height: 835px;
+    width: 700px;
+    min-height: auto;
+    padding-bottom: 20px;
     background-color: #1472BA;
     background: linear-gradient(180deg, #2C358F 0%, #1472BA 100%);
     box-shadow: 5px 0px 50px #FFFFFF;

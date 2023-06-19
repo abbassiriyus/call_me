@@ -6,6 +6,7 @@ import Api from "./Api";
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Verification from "./Verification";
+import Zvanoknastroyki from "./Zvanoknastroyki";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signup" Component={SignUp} />
           <Route path="/api" Component={Api} />
           <Route path="/dashboard" Component={Dashboard} />
+          <Route path="/setting" Component={Zvanoknastroyki} />
         </Routes>
       </BrowserRouter>
     </div>

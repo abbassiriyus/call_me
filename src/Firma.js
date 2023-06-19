@@ -29,7 +29,7 @@ zakroy1=()=>{
                           <div className="nav2">
                             <MdOutlineMailOutline className="nav2icon" />
                             <FaRegUserCircle className="nav2icon" />
-                            <p>imya-kliyenta</p>
+                            <p>{JSON.parse(localStorage.getItem("getAdmin")).username}</p>
                             <RxExit className="nav2icon" />
                           </div>
                         </Nav>

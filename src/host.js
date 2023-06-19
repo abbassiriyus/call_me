@@ -1,1 +1,2 @@
-const URL = 'https://calltocall.onrender.com'
+const url = 'https://calltocall.onrender.com'
+module.exports = url

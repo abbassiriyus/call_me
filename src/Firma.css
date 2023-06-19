@@ -3,7 +3,7 @@
 }
 .firmadiv{
     width: 50%;
-    height: 700px;
+    min-height: 700px;
     background-color: #1472BA;
     background: linear-gradient(180deg, #2C358F 0%, #1472BA 100%);
     box-shadow: 5px 0px 50px #FFFFFF;
@@ -338,7 +338,7 @@
 }
 .klm2 {
     width: 95%;
-    height:860px;
+    min-height:860px;
     display: flex;
     margin: auto;
     padding-top: 2%;

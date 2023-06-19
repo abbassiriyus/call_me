@@ -7,12 +7,14 @@
   width: 100%;
   display: flex;
   align-items: start;
+  overflow: hidden;
   justify-content: space-around;
+  height: 100vh;
 }
 .left-panel {
   width: 300px;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   flex-direction: column;
   box-shadow: 0px 50px 100px rgba(20, 114, 186, 0.16);
@@ -33,15 +35,16 @@
 }
 .right-panel {
   width: 100%;
-  overflow-y: scroll;
   display: flex;
+
+  overflow: hidden;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
 }
-body {
+/* body {
   overflow: hidden;
-}
+} */
 .l-panel-logo {
   width: 90%;
   padding-top: 10px;
@@ -332,7 +335,7 @@ h1 {
 
     position:  relative;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     overflow-y: scroll;
     flex-direction: column;
@@ -366,6 +369,19 @@ h1 {
       left: -500px;
     
     }
+    .rp-vvod {
+      width: 100%;
+      display: flex;
+      padding-left: 0px !important;
+      align-items: start;
+      height: 100vh;
+      justify-content: center !important;
+      overflow-y: scroll !important;
+      padding-top: 10px;
+      margin-bottom: 1000px;
+      background-color: #FFF;
+      padding-bottom: 200px;
+  }
     .right-panel{
       width: 100%;
     }
@@ -389,6 +405,84 @@ h1 {
     .i-user {
       font-size: 30px;
   }
+}
+.username{
+  display: none;
+}
+@media(max-width:600px){
+  .username{
+    display: none;
+  }
+  .usernamehover{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    right: 20px;
+    top: 50px;
+  }
+  .userhover:hover .usernamehover{
+    display: flex;
+  }
+}
+@media(max-width:750px){
+
+  .firmadiv1{
+    width: 95% !important;
+    min-height: auto;
+    overflow-x: scroll !important;
+    padding-bottom: 20px;
+    background-color: #1472BA;
+    background: linear-gradient(180deg, #2C358F 0%, #1472BA 100%);
+    box-shadow: 5px 0px 50px #FFFFFF;
+    border-radius: 8px;
+}
+.firma1{
+  width: 700px;
+}
+.firma2{
+  width: 700px;
+}
+.firma3{
+  width: 700px;
+}
+.firma4{
+  width: 700px;
+}
+.firma5{
+  width: 700px;
+}
+.firma6{
+  width: 700px;
+}
+.firma7{
+  width: 700px;
+}
+.line{
+  width: 650px;
+  margin-left: 20px;
+}
+.firma_div2{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 0px;
+}
+.firmadiv1::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
 }
 @media(max-width:800px){
   .i-user {
@@ -443,11 +537,15 @@ h1 {
 .rp-vvod{
   width: 100%;
   display: flex;
+  padding-left: 30px;
   align-items: start;
+  height: 100vh;
   justify-content: left;
+  overflow-y: scroll !important;
   padding-top: 10px;
+  margin-bottom: 1000px;
   background-color: #FFF ;
-  padding-bottom: 10px;
+  padding-bottom: 200px;
 }
 .body-down{
   cursor: pointer;
