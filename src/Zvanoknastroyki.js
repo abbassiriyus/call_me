@@ -54,282 +54,280 @@ export default function Zvanoknastroyki() {
     document.querySelector(".zvanokn").style = "display:none";
   }
   return (
+    <div className="firmadiv1">
+      <div className="firma1">
+        <h1>Название_оганизации</h1>
+        <button className="firma1but">
+          ID: {JSON.parse(localStorage.getItem("getAdmin")).id}
+        </button>
+      </div>
+      <div className="line"></div>
+      <div className="firma2">
+        <h1>Логин</h1>
+        <button></button>
 
-        <div className="firmadiv1">
-          <div className="firma1">
-            <h1>Название_оганизации</h1>
-            <button className="firma1but">
-              ID: {JSON.parse(localStorage.getItem("getAdmin")).id}
-            </button>
-          </div>
-          <div className="line"></div>
-          <div className="firma2">
-            <h1>Логин</h1>
-            <button></button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma3">
-            <h1>E-mail</h1>
-            <button>
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma4">
-            <h1>Соц сеть</h1>
-            <button>
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma5">
-            <h1>Пароль</h1>
-            <button>
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="line"></div>
-          <div className="firma6">
-            <h1>Раб телефон:</h1>
-            <button>
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma7">
-            <h1>Компания</h1>
-            <button className="firma7b">
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="line"></div>
-          <div className="firma7">
-            <h1>Реквизиты:</h1>
-            <button className="firma8b">
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma7">
-            <h1>ИНН</h1>
-            <button className="firma9b">
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma7">
-            <h1>КПП</h1>
-            <button className="firma10b">
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma7">
-            <h1>ОГРН</h1>
-            <button className="firma11b">
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma7">
-            <h1>Юридический адрес</h1>
-            <button className="firma12b">
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma7">
-            <h1>Руководители</h1>
-            <button className="firma13b">
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",          
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="line"></div>
-          <div className="firma7">
-            <h1>Сотрудники</h1>
-            <button className="firma14b">
-              <CiCirclePlus />
-            </button>
-            
-            <input
-              type="text"
-              style={{
-                border: "none",
-                borderLeft: "1px dashed white",
-                marginLeft: "20px",
-                background: "00000000",
-                color: "white",
-                height: "30px",
-                paddingLeft: "12px",
-              }}
-              className="allinput"
-            />
-          </div>
-          <div className="firma_div2">
-            <button onClick={zakroy} className="firma_butt2">
-              Закрыть
-            </button>
-          </div>
-        </div>
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma3">
+        <h1>E-mail</h1>
+        <button>
+          <CiCirclePlus />
+        </button>
 
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma4">
+        <h1>Соц сеть</h1>
+        <button>
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma5">
+        <h1>Пароль</h1>
+        <button>
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="line"></div>
+      <div className="firma6">
+        <h1>Раб телефон:</h1>
+        <button>
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma7">
+        <h1>Компания</h1>
+        <button className="firma7b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="line"></div>
+      <div className="firma7">
+        <h1>Реквизиты:</h1>
+        <button className="firma8b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma7">
+        <h1>ИНН</h1>
+        <button className="firma9b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma7">
+        <h1>КПП</h1>
+        <button className="firma10b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma7">
+        <h1>ОГРН</h1>
+        <button className="firma11b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma7">
+        <h1>Юридический адрес</h1>
+        <button className="firma12b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma7">
+        <h1>Руководители</h1>
+        <button className="firma13b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="line"></div>
+      <div className="firma7">
+        <h1>Сотрудники</h1>
+        <button className="firma14b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma_div2">
+        <button onClick={zakroy} className="firma_butt2">
+          Закрыть
+        </button>
+      </div>
+    </div>
   );
 }

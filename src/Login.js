@@ -5,8 +5,8 @@ import axios from "axios";
 import Host from "./host";
 
 function Login() {
-  function reg(){
-    window.location = '/signup';
+  function reg() {
+    window.location = "/signup";
   }
 
   const [email, setEmail] = useState("");
@@ -26,17 +26,21 @@ function Login() {
       );
       const userData = response.data;
       localStorage.setItem("token", userData.access);
-      localStorage.setItem("userGet",JSON.stringify( {
-        email,
-        password,
-      }))
-      window.location = '/dashboard';
+      localStorage.setItem(
+        "userGet",
+        JSON.stringify({
+          email,
+          password,
+        })
+      );
+      console.log(userData);
+      window.location = "/dashboard";
       console.log("SignIn successful:", response.data);
-      alert('Вход успешно выволнена')
+      alert("Вход успешно выволнена");
       // Дополнительная обработка после успешного входа
     } catch (error) {
       console.error("Error signing in:", error.response.data);
-      alert('Ошибка при входе')
+      alert("Ошибка при входе");
       // Обработка ошибки входа
     }
   };
@@ -64,8 +68,13 @@ function Login() {
             <div className="but">
               <button>Войти</button>
               <div className="but2">
-                <p style={{marginTop:'-10px'}}>Еще нет аккаунта?</p>
-                <p style={{cursor:'pointer', marginTop:'15px'}} onClick={reg}>Регистрация</p>
+                <p style={{ marginTop: "-10px" }}>Еще нет аккаунта?</p>
+                <p
+                  style={{ cursor: "pointer", marginTop: "15px" }}
+                  onClick={reg}
+                >
+                  Регистрация
+                </p>
               </div>
             </div>
           </form>

@@ -208,7 +208,7 @@
 
 // export default Dashboard;
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import logo from "./nimg/Logo_color 1.png";
 import "./style/Dashboard.css";
 import Accordion from "react-bootstrap/Accordion";
@@ -229,38 +229,44 @@ import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineBars } from "react-icons/ai";
 import axios from "axios";
 import Login from "./Login";
-import url from './host';
+import url from "./host";
 import Zvanoknastroyki from "./Zvanoknastroyki";
 
 export default function Dashboard() {
-
   function menuop() {
     document.querySelector(".left-panel").style =
       "display: flex; position: absolute; top: 0; left: 0; z-index:10; transition: .7s; overflow: scroll; padding-bottom: 100px;height: 100vh;";
-    document.querySelector(".closemenu").style = "display: flex"
+    document.querySelector(".closemenu").style = "display: flex";
   }
   function menucl() {
     document.querySelector(".left-panel").style =
       "display: flex; position: absolute; top: 0; left: -500; z-index:10; transition: .7s";
-    document.querySelector(".closemenu").style = "display: none"
+    document.querySelector(".closemenu").style = "display: none";
   }
   function userhover() {
-    document.querySelector('.usernamehover').style = "display: flex"
+    document.querySelector(".usernamehover").style = "display: flex";
+  }
+  function logout(){
+    window.location='/'
   }
   const [page, setPage] = useState(0);
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    var lo=JSON.parse(localStorage.getItem("userGet"))
-axios.get(`${url}/auth/users/`, { headers:{ Authorization: "Bearer " +localStorage.getItem("token")}}).then((res) => {
-res.data.map((user) => {
-if (user.email===lo.email){
-  setUser(user);
-localStorage.setItem("getAdmin",JSON.stringify(user))
-}
-})
-})
-},[])
+    var lo = JSON.parse(localStorage.getItem("userGet"));
+    axios
+      .get(`${url}/auth/users/`, {
+        headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+      })
+      .then((res) => {
+        res.data.map((user) => {
+          if (user.email === lo.email) {
+            setUser(user);
+            localStorage.setItem("getAdmin", JSON.stringify(user));
+          }
+        });
+      });
+  }, []);
   return (
     <div>
       <div className="main">
@@ -318,9 +324,12 @@ localStorage.setItem("getAdmin",JSON.stringify(user))
                   <BsTelephone /> <p>Обратный звонок</p>
                 </Accordion.Header>
                 <Accordion.Body>
-                  <div onClick={() => {
-                    setPage(1);
-                  }} className="body-down">
+                  <div
+                    onClick={() => {
+                      setPage(1);
+                    }}
+                    className="body-down"
+                  >
                     <FiSettings /> Настройки
                   </div>
                 </Accordion.Body>
@@ -371,7 +380,7 @@ localStorage.setItem("getAdmin",JSON.stringify(user))
         <div className="right-panel">
           <div className="rp-menu">
             <div className="rp-btn">
-              <AiOutlineBars style={{ fontSize: '30px' }} onClick={menuop} />
+              <AiOutlineBars style={{ fontSize: "30px" }} onClick={menuop} />
             </div>
             <AiOutlineClose onClick={menucl} className="closemenu" />
             <div className="rp-m-profile">
@@ -386,18 +395,14 @@ localStorage.setItem("getAdmin",JSON.stringify(user))
               <div className="rp-m-all-all">
                 <HiOutlineMail />
                 <HiOutlineUserCircle onClick={userhover} />
-                <div className="usernamehover">
-                {user.username}
-                </div>
-                <div className="username">
-                {user.username}
-                </div>
-                <HiOutlineLogout />
+                <div className="usernamehover">{user.username}</div>
+                <div className="username">{user.username}</div>
+                <HiOutlineLogout style={{cursor:'pointer'}} onClick={logout} />
               </div>
             </div>
           </div>
           <div className="rp-vvod">
-            {page === 1 ? (<Zvanoknastroyki />) : (<div></div>)}
+            {page === 1 ? <Zvanoknastroyki /> : <div></div>}
           </div>
         </div>
       </div>
