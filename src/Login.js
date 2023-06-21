@@ -36,7 +36,6 @@ function Login() {
       console.log(userData);
       window.location = "/dashboard";
       console.log("SignIn successful:", response.data);
-      alert("Вход успешно выволнена");
       // Дополнительная обработка после успешного входа
     } catch (error) {
       console.error("Error signing in:", error.response.data);

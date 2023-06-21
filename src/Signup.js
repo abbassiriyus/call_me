@@ -63,14 +63,14 @@ function Signup() {
           verify_code,
         }
       );
-
+        const nameCompany = document.querySelector("#nameCompany").value
       console.log(response.data.verify_code, "zbek");
       localStorage.setItem("verefication", response.data.verify_code);
       localStorage.setItem("email", email);
+      localStorage.setItem("nameCompany", nameCompany);
       localStorage.setItem("username", username);
       localStorage.setItem("phone", phone);
       localStorage.setItem("password", password);
-      alert("Пройдите верефикатцию");
       console.log("SignUp successful:", response.data);
       window.location = "/verefication";
       // Дополнительная обработка после успешной регистрации
@@ -96,12 +96,8 @@ function Signup() {
               type="text"
               placeholder="Имя и фамилия"
             />
-            <input
-              onChange={(e) => setPhone(e.target.value)}
-              type="number"
-              placeholder="Контактный телефон"
-            />
-            <input type="text" placeholder="Название организации" />
+            <input onChange={(e) => setPhone(e.target.value)} type="text" placeholder="Контактный телефон"/>
+            <input id="nameCompany" type="text" placeholder="Название организации" />
             <input
               onChange={(e) => setEmail(e.target.value)}
               type="text"
@@ -114,9 +110,7 @@ function Signup() {
             />
 
             <div className="but">
-              <button>
-                Зарегестрир <br /> оваться
-              </button>
+              <button>Регистрация</button>
               <div className="but2">
                 <p style={{ marginTop: "-10px" }}>Есть аккаунт?</p>
                 <p

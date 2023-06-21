@@ -7,6 +7,8 @@ import url from "./host";
 
 const Verification = () => {
   const [password, setPassword] = useState("");
+  
+  const email2 = localStorage.getItem("email")
   function sendFanction() {
     if (password === localStorage.getItem("verefication")) {
       var formdata = new FormData();
@@ -17,12 +19,13 @@ const Verification = () => {
       formdata.append("password", localStorage.getItem("password"));
       formdata.append("is_verified", true);
       axios.post(`${url}/auth/register/`, formdata).then((res) => {
-        window.location = "/";
+        alert("Ваш код верен! Вы прошли регистрацию!")
+        window.location = "/dashboard";
       });
     } else {
       alert("Не правильно попробуйте еще раз пожалуйста");
     }
-  }
+  } 
   return (
     <div>
       <div className="main2">
@@ -32,7 +35,7 @@ const Verification = () => {
             <h1>Верефикатция</h1>
           </div>
           <div className="ms-prosto">
-            <span>example@gmail.com</span>
+            <span>{email2}</span>
           </div>
           <div className="ms-ver">
             <input onChange={(e) => setPassword(e.target.value)} type="text" />

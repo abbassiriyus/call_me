@@ -8,6 +8,7 @@ import React, { useEffect } from "react";
 import "./klient.css";
 import { CiCirclePlus } from "react-icons/ci";
 export default function Zvanoknastroyki() {
+  const companyName = localStorage.getItem("nameCompany")
   useEffect(() => {
     document.querySelectorAll(".allinput")[0].value = JSON.parse(
       localStorage.getItem("getAdmin")
@@ -56,7 +57,7 @@ export default function Zvanoknastroyki() {
   return (
     <div className="firmadiv1">
       <div className="firma1">
-        <h1>Название_оганизации</h1>
+        <h1 className="nameCompanyh1">{companyName}</h1>
         <button className="firma1but">
           ID: {JSON.parse(localStorage.getItem("getAdmin")).id}
         </button>
