@@ -137,10 +137,18 @@ p {
   justify-content: space-around;
 }
 .body-down {
-  width: 70%;
+  width: 100%;
   display: flex;
+  padding-left: 10px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
+}
+.body-down svg{
+  margin-right: 30px;
+}
+svg{
+  color: #2C358F;
+  font-weight: 200;
 }
 .down-panel {
   width: 100%;
@@ -468,7 +476,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: left;
-  margin: 0px;
+  margin-left: 20px;
 }
 .firmadiv1::-webkit-scrollbar {
   width: 0px;
@@ -552,3 +560,6 @@ h1 {
   cursor: pointer;
 }
 
+.accordion-body{
+  flex-direction: column;
+}

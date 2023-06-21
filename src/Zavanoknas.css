@@ -1,83 +1,104 @@
-.firma2 p{
-    color: white;
+.firma2 p {
+  color: white;
 }
-.line2{
-    margin-right: 10px !important;
+.line2 {
+  margin-right: 10px !important;
 }
-.firma1but{
-    padding: 2px 30px 2px 30px !important;
+.firma1but {
+  padding: 2px 30px 2px 30px !important;
 }
-.line1a{
-    width: 28px;
-    height: 0px;
-    border: 1px dashed #FFFFFF;
-    transform: rotate(90deg);
-    justify-content: center;
-    margin-left: 120px;
+.line1a {
+  width: 28px;
+  height: 0px;
+  border: 1px dashed #ffffff;
+  transform: rotate(90deg);
+  justify-content: center;
+  margin-left: 120px;
 }
-.firma3 button{
-    margin-left: 115px !important;
+.firma3 button {
+  margin-left: 115px !important;
 }
-.firma4 button{
-    margin-left: 95px !important;
+.firma4 button {
+  margin-left: 95px !important;
 }
-.firma5 button{
-    margin-left: 105px !important;
+.firma5 button {
+  margin-left: 105px !important;
 }
-.firma6 button{
-    margin-left: 58px !important;
+.firma6 button {
+  margin-left: 58px !important;
 }
-.firma7b{
-    margin-left: 80px !important;
+.firma7b {
+  margin-left: 80px !important;
 }
-.firma8b{
-    margin-left: 75px !important;
+.firma8b {
+  margin-left: 75px !important;
 }
-.firma9b{
-    margin-left: 127px !important;
+.firma9b {
+  margin-left: 127px !important;
 }
-.firma10b{
-    margin-left: 127px !important;
+.firma10b {
+  margin-left: 127px !important;
 }
-.firma11b{
-    margin-left: 118px !important;
+.firma11b {
+  margin-left: 118px !important;
 }
-.firma12b{
-    margin-left: 48px !important;
+.firma12b {
+  margin-left: 48px !important;
 }
-.firma13b{
-    margin-left: 48px !important;
+.firma13b {
+  margin-left: 48px !important;
 }
-.firma3 p{
-    color: white;
+.firma3 p {
+  color: white;
 }
-.firma4 p{
-    color: white;
+.firma4 p {
+  color: white;
 }
-.firma5 p{
-    color: white;
+.firma5 p {
+  color: white;
 }
-.firma6 p{
-    color: white;
+.firma6 p {
+  color: white;
 }
-.firma7 p{
-    color: white;
+.firma7 p {
+  color: white;
 }
-.firmadiv1{
-    width: 700px;
-    min-height: auto;
-    padding-bottom: 20px;
-    background-color: #1472BA;
-    background: linear-gradient(180deg, #2C358F 0%, #1472BA 100%);
-    box-shadow: 5px 0px 50px #FFFFFF;
-    border-radius: 8px;
+.firmadiv1 {
+  width: 700px;
+  min-height: auto;
+  padding-bottom: 20px;
+  background-color: #1472ba;
+  background: linear-gradient(180deg, #2c358f 0%, #1472ba 100%);
+  box-shadow: 5px 0px 50px #ffffff;
+  border-radius: 8px;
+}
+.firma_div2 {
+  display: flex;
+  /* margin-top:30px; */
+  margin-left:400px;
+}
+.firma7 {
+  text-align: left;
+}
+.firma_div2 button:nth-child(1) {
+  background: #1472ba;
+  border-radius: 8px;
+  width: 120px;
+  font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height, or 125% */
 
-}
-.firma_div2{
-    display: flex;
-    /* margin-top:30px; */
-    margin-left: 300px;
-}
-.firma7{
-    text-align: left;
+display: flex;
+align-items: center;
+text-align: center;
+
+/* app */
+border: none;
+display: flex;
+align-items: center;
+justify-content: space-around;
+color: #FFFFFF;
+
+  height: 32px;
 }

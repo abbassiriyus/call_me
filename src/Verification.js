@@ -39,9 +39,10 @@ const Verification = () => {
           </div>
           <div className="ms-ver">
             <input onChange={(e) => setPassword(e.target.value)} type="text" />
+            
           </div>
           <div className="ms-btn">
-            <button onClick={() => sendFanction()}>Проверить</button>
+            <button onClick={() => sendFanction()}>Подтвердить</button>
           </div>
         </div>
       </div>

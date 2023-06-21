@@ -62,7 +62,7 @@ border-radius: 6px;
  
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 .ms-btn button{
     height: 52px;

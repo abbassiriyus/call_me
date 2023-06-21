@@ -42,6 +42,10 @@ import logo from "./img/Logo_color 1.png";
 function Signup() {
   function sign() {
     window.location = "/";
+
+  }
+  function scan(){
+
   }
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -76,8 +80,31 @@ function Signup() {
       // Дополнительная обработка после успешной регистрации
     } catch (error) {
       console.error("Error signing up:", error.response.data);
-      alert("Проверьте данные и попробуйте еще раз");
-      // Обработка ошибки регистрации
+      if((document.querySelector('.input1').value).length < 3){
+        document.querySelector('.input1').style = "border: 1px solid red"
+      }else{
+        document.querySelector('.input1').style = "border: 1px solid #939393"
+      }if((document.querySelector('.input2').value).length < 3){
+        document.querySelector('.input2').style = "border: 1px solid red"
+      }else{
+        document.querySelector('.input2').style = "border: 1px solid #939393"
+      }
+      if((document.querySelector('.input3').value).length < 3){
+        document.querySelector('.input3').style = "border: 1px solid red"
+      }else{
+        document.querySelector('.input3').style = "border: 1px solid #939393"
+      }
+      if((document.querySelector('.input4').value).includes('@')){
+        document.querySelector('.input4').style = "border: 1px solid #939393"
+      } 
+      else{
+        document.querySelector('.input4').style = "border: 1px solid red"
+      }
+      if((document.querySelector('.input5').value).length < 8){
+        document.querySelector('.input5').style = "border: 1px solid red"
+      }else{
+        document.querySelector('.input5').style = "border: 1px solid #939393"
+      }
     }
   };
 
@@ -96,21 +123,23 @@ function Signup() {
               type="text"
               placeholder="Имя и фамилия"
             />
-            <input onChange={(e) => setPhone(e.target.value)} type="text" placeholder="Контактный телефон"/>
-            <input id="nameCompany" type="text" placeholder="Название организации" />
+            <input className="input2" onChange={(e) => setPhone(e.target.value)} type="text" placeholder="Контактный телефон"/>
+            <input className="input3" id="nameCompany" type="text" placeholder="Название организации" />
             <input
               onChange={(e) => setEmail(e.target.value)}
               type="text"
               placeholder="Email"
+              className="input4"
             />
             <input
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               placeholder="Пароль"
+              className="input5"
             />
 
             <div className="but">
-              <button>Регистрация</button>
+              <button >Регистрация</button>
               <div className="but2">
                 <p style={{ marginTop: "-10px" }}>Есть аккаунт?</p>
                 <p

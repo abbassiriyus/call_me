@@ -227,7 +227,9 @@ import { HiOutlineChartSquareBar } from "react-icons/hi";
 import { FiSettings } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineBars } from "react-icons/ai";
+import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import axios from "axios";
+import Klient from "./Klient";
 import Login from "./Login";
 import url from "./host";
 import Zvanoknastroyki from "./Zvanoknastroyki";
@@ -246,8 +248,12 @@ export default function Dashboard() {
   function userhover() {
     document.querySelector(".usernamehover").style = "display: flex";
   }
-  function logout(){
-    window.location='/'
+  function logout() {
+    window.location = "/";
+  }
+  function aaa() {
+    setPage(2);
+    document.querySelector(".aaaname").innerHTML = "Клиенты";
   }
   const [page, setPage] = useState(0);
   const [user, setUser] = useState({});
@@ -267,6 +273,7 @@ export default function Dashboard() {
         });
       });
   }, []);
+
   return (
     <div>
       <div className="main">
@@ -278,7 +285,7 @@ export default function Dashboard() {
             </h1>
           </div>
           <div className="l-panel-menu">
-            <Accordion defaultActiveKey={["0"]} alwaysOpen>
+            <Accordion defaultActiveKey={["0"]}>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
                   <GoBriefcase /> <p>Рабочий стол</p>
@@ -301,8 +308,14 @@ export default function Dashboard() {
               </Accordion.Item>
               <Accordion.Item eventKey="2">
                 <Accordion.Header>
-                  <HiOutlineUserGroup /> <p>Клиенты</p>
+                  <HiOutlineUserGroup />
+                  <p onClick={aaa}>Клиенты</p>
                 </Accordion.Header>
+                <Accordion.Body>
+                  <div className="body-down">
+                    <HiOutlineOfficeBuilding /> Фирма
+                  </div>
+                </Accordion.Body>
                 <Accordion.Body>
                   <div className="body-down">
                     <CiSaveDown2 /> Настройки
@@ -385,7 +398,7 @@ export default function Dashboard() {
             <AiOutlineClose onClick={menucl} className="closemenu" />
             <div className="rp-m-profile">
               <HiOutlineUserCircle className="i-user" />
-              <h1>Профиль</h1>
+              <h1 className="aaaname">Профиль</h1>
             </div>
             <div className="rp-m-all">
               <div className="rp-m-all-inp">
@@ -397,12 +410,21 @@ export default function Dashboard() {
                 <HiOutlineUserCircle onClick={userhover} />
                 <div className="usernamehover">{user.username}</div>
                 <div className="username">{user.username}</div>
-                <HiOutlineLogout style={{cursor:'pointer'}} onClick={logout} />
+                <HiOutlineLogout
+                  style={{ cursor: "pointer" }}
+                  onClick={logout}
+                />
               </div>
             </div>
           </div>
           <div className="rp-vvod">
-            {page === 1 ? <Zvanoknastroyki /> : <div></div>}
+            {page === 1 ? (
+              <Zvanoknastroyki />
+            ) : page == 2 ? (
+              <Klient />
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
       </div>

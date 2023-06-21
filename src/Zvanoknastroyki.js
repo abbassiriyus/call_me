@@ -7,6 +7,8 @@ import { RxExit } from "react-icons/rx";
 import React, { useEffect } from "react";
 import "./klient.css";
 import { CiCirclePlus } from "react-icons/ci";
+import url from "./host";
+import axios from "axios";
 export default function Zvanoknastroyki() {
   const companyName = localStorage.getItem("nameCompany")
   useEffect(() => {
@@ -44,20 +46,52 @@ export default function Zvanoknastroyki() {
       localStorage.getItem("getAdmin")
     ).registered_adress;
     document.querySelectorAll(".allinput")[11].value = JSON.parse(
-      localStorage.getItem("getAdmin")
-    ).manager;
+          localStorage.getItem("getAdmin")
+        ).actual_adress;
     document.querySelectorAll(".allinput")[12].value = JSON.parse(
       localStorage.getItem("getAdmin")
-    ).user_permissions;
+    ).manager;
+    document.querySelectorAll(".allinput")[13].value = JSON.parse(
+      localStorage.getItem("getAdmin")
+    ).staff;
   }, []);
+function dataPost() {
+  window.location = '/dashboard'
+  var DataPost={
+"username":document.querySelectorAll(".allinput")[0].value,
+'email':document.querySelectorAll(".allinput")[1].value,
+'social_network':document.querySelectorAll(".allinput")[2].value,
+'phone':document.querySelectorAll(".allinput")[4].value,
+'organization':document.querySelectorAll(".allinput")[5].value,
+'requisite':document.querySelectorAll(".allinput")[6].value,
+'inn':document.querySelectorAll(".allinput")[7].value,
+'kpp':document.querySelectorAll(".allinput")[8].value,
+'ogrn':document.querySelectorAll(".allinput")[9].value,
+'registered_adress':document.querySelectorAll(".allinput")[10].value,
+'actual_adress':document.querySelectorAll(".allinput")[11].value,
+'manager':document.querySelectorAll(".allinput")[12].value,
+'staff':document.querySelectorAll(".allinput")[13].value,
+}
 
+console.log(DataPost);
+
+
+axios.put(`${url}/auth/users/${JSON.parse(
+  localStorage.getItem("getAdmin")
+).id}/`,DataPost,{
+  headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+}).then(res=>{
+  alert("Success")
+}).catch(err=>{alert("Error")})
+}
   function zakroy() {
-    document.querySelector(".zvanokn").style = "display:none";
+    document.querySelector(".firmadiv1").style = "display:none";
   }
   return (
+    
     <div className="firmadiv1">
       <div className="firma1">
-        <h1 className="nameCompanyh1">{companyName}</h1>
+        <h1 className="nameCompanyh1">{JSON.parse(localStorage.getItem("getAdmin")).organization}</h1>
         <button className="firma1but">
           ID: {JSON.parse(localStorage.getItem("getAdmin")).id}
         </button>
@@ -284,6 +318,26 @@ export default function Zvanoknastroyki() {
         />
       </div>
       <div className="firma7">
+        <h1>Фактический адрес</h1>
+        <button className="firma12b">
+          <CiCirclePlus />
+        </button>
+
+        <input
+          type="text"
+          style={{
+            border: "none",
+            borderLeft: "1px dashed white",
+            marginLeft: "20px",
+            background: "00000000",
+            color: "white",
+            height: "30px",
+            paddingLeft: "12px",
+          }}
+          className="allinput"
+        />
+      </div>
+      <div className="firma7">
         <h1>Руководители</h1>
         <button className="firma13b">
           <CiCirclePlus />
@@ -325,6 +379,7 @@ export default function Zvanoknastroyki() {
         />
       </div>
       <div className="firma_div2">
+        <button  onClick={()=>{dataPost()}} >Редактировать</button>
         <button onClick={zakroy} className="firma_butt2">
           Закрыть
         </button>
