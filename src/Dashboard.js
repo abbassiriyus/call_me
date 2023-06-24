@@ -3,10 +3,10 @@
 // import logo from "./nimg/Logo_color 1.png";
 // import "./style/Dashboard.css";
 // import Accordion from "react-bootstrap/Accordion";
-// import { GoBriefcase } from "react-icons/go";
+// import { HiOutlineBriefcase } from "react-icons/go";
 // import { CiSaveDown2 } from "react-icons/ci";
 // import { BsClipboardCheck } from "react-icons/bs";
-// import { BsChatLeft } from "react-icons/bs";
+// import { HiOutlineChatBubbleLeftEllipsis } from "react-icons/bs";
 // import { BsTelephone } from "react-icons/bs";
 // import { HiOutlineUserGroup } from "react-icons/hi";
 // import { HiOutlineLogout } from "react-icons/hi";
@@ -64,7 +64,7 @@
 //               <Accordion defaultActiveKey={["0"]} alwaysOpen>
 //                 <Accordion.Item eventKey="0">
 //                   <Accordion.Header>
-//                     <GoBriefcase /> <p>Рабочий стол</p>
+//                     <HiOutlineBriefcase /> <p>Рабочий стол</p>
 //                   </Accordion.Header>
 //                   <Accordion.Body>
 //                     <div className="body-down">
@@ -116,7 +116,7 @@
 //                 </Accordion.Item>
 //                 <Accordion.Item eventKey="5">
 //                   <Accordion.Header>
-//                     <BsChatLeft /> <p>Чат на сайт</p>
+//                     <HiOutlineChatBubbleLeftEllipsis /> <p>Чат на сайт</p>
 //                   </Accordion.Header>
 //                   <Accordion.Body>
 //                     <div className="body-down">
@@ -136,7 +136,7 @@
 //                 </Accordion.Item>
 //                 <Accordion.Item eventKey="7">
 //                   <Accordion.Header>
-//                     <GoBriefcase /> <p>Настройки</p>
+//                     <HiOutlineBriefcase /> <p>Настройки</p>
 //                   </Accordion.Header>
 //                   <Accordion.Body>
 //                     <div className="body-down">
@@ -212,10 +212,10 @@ import React, { useEffect, useState } from "react";
 import logo from "./nimg/Logo_color 1.png";
 import "./style/Dashboard.css";
 import Accordion from "react-bootstrap/Accordion";
-import { GoBriefcase } from "react-icons/go";
+import { HiOutlineBriefcase } from "react-icons/hi";
 import { CiSaveDown2 } from "react-icons/ci";
 import { BsClipboardCheck } from "react-icons/bs";
-import { BsChatLeft } from "react-icons/bs";
+import { HiOutlineChatBubbleLeftEllipsis } from "react-icons/hi2";
 import { BsTelephone } from "react-icons/bs";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { HiOutlineLogout } from "react-icons/hi";
@@ -288,7 +288,7 @@ export default function Dashboard() {
             <Accordion defaultActiveKey={["0"]}>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
-                  <GoBriefcase /> <p>Рабочий стол</p>
+                  <HiOutlineBriefcase /> <p>Рабочий стол</p>
                 </Accordion.Header>
                 <Accordion.Body>
                   <div className="body-down">
@@ -315,8 +315,6 @@ export default function Dashboard() {
                   <div className="body-down">
                     <HiOutlineOfficeBuilding /> Фирма
                   </div>
-                </Accordion.Body>
-                <Accordion.Body>
                   <div className="body-down">
                     <CiSaveDown2 /> Настройки
                   </div>
@@ -349,7 +347,7 @@ export default function Dashboard() {
               </Accordion.Item>
               <Accordion.Item eventKey="5">
                 <Accordion.Header>
-                  <BsChatLeft /> <p>Чат на сайт</p>
+                  <HiOutlineChatBubbleLeftEllipsis /> <p>Чат на сайт</p>
                 </Accordion.Header>
                 <Accordion.Body>
                   <div className="body-down">
@@ -369,7 +367,7 @@ export default function Dashboard() {
               </Accordion.Item>
               <Accordion.Item eventKey="7">
                 <Accordion.Header>
-                  <GoBriefcase /> <p>Настройки</p>
+                  <HiOutlineBriefcase /> <p>Настройки</p>
                 </Accordion.Header>
                 <Accordion.Body>
                   <div className="body-down">

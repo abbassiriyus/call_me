@@ -79,3 +79,40 @@
     text-align: left;
     height: 5px;
   }
+  .error_block{
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none;
+    margin-left: 30%;
+  }
+  .error_block p{
+    color:  red;
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #type-i{
+    position: absolute !important;
+    bottom: 80px !important;
+    right: 60px !important;
+    z-index: 30 !important;
+    cursor: pointer;
+    display: none;
+  }
+  #type-i2{
+    position: absolute !important;
+    bottom: 80px !important;
+    right: 60px !important;
+    cursor: pointer;
+    display: none;
+    z-index: 30 !important;
+  }

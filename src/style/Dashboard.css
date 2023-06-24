@@ -558,8 +558,24 @@ h1 {
 }
 .body-down{
   cursor: pointer;
+  line-height: 40px;
 }
 
 .accordion-body{
   flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.accordion-body ul{
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+}
+.accordion-collapse {
+  padding: 0px !important;
+  width: 100% !important;
 }

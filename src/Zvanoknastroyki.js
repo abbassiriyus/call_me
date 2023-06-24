@@ -10,7 +10,7 @@ import { CiCirclePlus } from "react-icons/ci";
 import url from "./host";
 import axios from "axios";
 export default function Zvanoknastroyki() {
-  const companyName = localStorage.getItem("nameCompany")
+  const companyName = localStorage.getItem("nameCompany");
   useEffect(() => {
     document.querySelectorAll(".allinput")[0].value = JSON.parse(
       localStorage.getItem("getAdmin")
@@ -46,8 +46,8 @@ export default function Zvanoknastroyki() {
       localStorage.getItem("getAdmin")
     ).registered_adress;
     document.querySelectorAll(".allinput")[11].value = JSON.parse(
-          localStorage.getItem("getAdmin")
-        ).actual_adress;
+      localStorage.getItem("getAdmin")
+    ).actual_adress;
     document.querySelectorAll(".allinput")[12].value = JSON.parse(
       localStorage.getItem("getAdmin")
     ).manager;
@@ -55,43 +55,49 @@ export default function Zvanoknastroyki() {
       localStorage.getItem("getAdmin")
     ).staff;
   }, []);
-function dataPost() {
-  window.location = '/dashboard'
-  var DataPost={
-"username":document.querySelectorAll(".allinput")[0].value,
-'email':document.querySelectorAll(".allinput")[1].value,
-'social_network':document.querySelectorAll(".allinput")[2].value,
-'phone':document.querySelectorAll(".allinput")[4].value,
-'organization':document.querySelectorAll(".allinput")[5].value,
-'requisite':document.querySelectorAll(".allinput")[6].value,
-'inn':document.querySelectorAll(".allinput")[7].value,
-'kpp':document.querySelectorAll(".allinput")[8].value,
-'ogrn':document.querySelectorAll(".allinput")[9].value,
-'registered_adress':document.querySelectorAll(".allinput")[10].value,
-'actual_adress':document.querySelectorAll(".allinput")[11].value,
-'manager':document.querySelectorAll(".allinput")[12].value,
-'staff':document.querySelectorAll(".allinput")[13].value,
-}
+  function dataPost() {
+    var DataPost = {
+      username: (document.querySelectorAll(".allinput")[0].value).length > 2?document.querySelectorAll(".allinput")[0].value:null,
+      email: (document.querySelectorAll(".allinput")[1].value).includes('@')?document.querySelectorAll(".allinput")[1].value:null,
+      social_network: (document.querySelectorAll(".allinput")[2].value).length > 2?document.querySelectorAll(".allinput")[2].value:null,
+      phone: (document.querySelectorAll(".allinput")[4].value).length > 2?document.querySelectorAll(".allinput")[4].value:null,
+      organization: (document.querySelectorAll(".allinput")[5].value).length > 2?document.querySelectorAll(".allinput")[5].value:null,
+      requisite: (document.querySelectorAll(".allinput")[6].value).length > 2?document.querySelectorAll(".allinput")[6].value:null,
+      inn: (document.querySelectorAll(".allinput")[7].value).length > 2?document.querySelectorAll(".allinput")[7].value:null,
+      kpp: (document.querySelectorAll(".allinput")[8].value).length > 2?document.querySelectorAll(".allinput")[8].value:null,
+      ogrn: (document.querySelectorAll(".allinput")[9].value).length > 2?document.querySelectorAll(".allinput")[9].value:null,
+      registered_adress: (document.querySelectorAll(".allinput")[10].value).length > 2?document.querySelectorAll(".allinput")[10].value:null,
+      actual_adress: (document.querySelectorAll(".allinput")[11].value).length > 2?document.querySelectorAll(".allinput")[11].value:null,
+      manager: (document.querySelectorAll(".allinput")[12].value).length > 2?document.querySelectorAll(".allinput")[12].value:null,
+      staff: (document.querySelectorAll(".allinput")[13].value).length > 2?document.querySelectorAll(".allinput")[13].value:null,
+    };
 
-console.log(DataPost);
+    console.log(DataPost);
 
-
-axios.put(`${url}/auth/users/${JSON.parse(
-  localStorage.getItem("getAdmin")
-).id}/`,DataPost,{
-  headers: { Authorization: "Bearer " + localStorage.getItem("token") },
-}).then(res=>{
-  alert("Success")
-}).catch(err=>{alert("Error")})
-}
+    axios
+      .put(
+        `${url}/auth/users/${JSON.parse(localStorage.getItem("getAdmin")).id}/`,
+        DataPost,
+        {
+          headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+        }
+      )
+      .then((res) => {
+        window.location = "/dashboard";
+      })
+      .catch((err) => {
+        alert("Error");
+      });
+  }
   function zakroy() {
     document.querySelector(".firmadiv1").style = "display:none";
   }
   return (
-    
     <div className="firmadiv1">
       <div className="firma1">
-        <h1 className="nameCompanyh1">{JSON.parse(localStorage.getItem("getAdmin")).organization}</h1>
+        <h1 className="nameCompanyh1">
+          {JSON.parse(localStorage.getItem("getAdmin")).organization}
+        </h1>
         <button className="firma1but">
           ID: {JSON.parse(localStorage.getItem("getAdmin")).id}
         </button>
@@ -112,14 +118,11 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma7b"
         />
       </div>
       <div className="firma3">
         <h1>E-mail</h1>
-        <button>
-          <CiCirclePlus />
-        </button>
 
         <input
           type="text"
@@ -132,12 +135,12 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma7b"
         />
       </div>
       <div className="firma4">
         <h1>Соц сеть</h1>
-        <button>
+        <button className="">
           <CiCirclePlus />
         </button>
 
@@ -152,17 +155,15 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput "
         />
       </div>
       <div className="firma5">
         <h1>Пароль</h1>
-        <button>
-          <CiCirclePlus />
-        </button>
+
 
         <input
-          type="text"
+          type="password"
           style={{
             border: "none",
             borderLeft: "1px dashed white",
@@ -172,13 +173,13 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma7b"
         />
       </div>
       <div className="line"></div>
       <div className="firma6">
         <h1>Раб телефон:</h1>
-        <button>
+        <button className="firma14b">
           <CiCirclePlus />
         </button>
 
@@ -193,14 +194,12 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput "
         />
       </div>
-      <div className="firma7">
+      <div className="firma7 ">
         <h1>Компания</h1>
-        <button className="firma7b">
-          <CiCirclePlus />
-        </button>
+
 
         <input
           type="text"
@@ -213,15 +212,13 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma7b"
         />
       </div>
       <div className="line"></div>
       <div className="firma7">
         <h1>Реквизиты:</h1>
-        <button className="firma8b">
-          <CiCirclePlus />
-        </button>
+
 
         <input
           type="text"
@@ -234,14 +231,12 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma8b"
         />
       </div>
       <div className="firma7">
         <h1>ИНН</h1>
-        <button className="firma9b">
-          <CiCirclePlus />
-        </button>
+
 
         <input
           type="text"
@@ -254,14 +249,12 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma9b"
         />
       </div>
       <div className="firma7">
         <h1>КПП</h1>
-        <button className="firma10b">
-          <CiCirclePlus />
-        </button>
+
 
         <input
           type="text"
@@ -274,14 +267,12 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma10b"
         />
       </div>
       <div className="firma7">
         <h1>ОГРН</h1>
-        <button className="firma11b">
-          <CiCirclePlus />
-        </button>
+
 
         <input
           type="text"
@@ -294,14 +285,12 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma11b"
         />
       </div>
       <div className="firma7">
         <h1>Юридический адрес</h1>
-        <button className="firma12b">
-          <CiCirclePlus />
-        </button>
+
 
         <input
           type="text"
@@ -314,14 +303,12 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma12b"
         />
       </div>
       <div className="firma7">
         <h1>Фактический адрес</h1>
-        <button className="firma12b">
-          <CiCirclePlus />
-        </button>
+        
 
         <input
           type="text"
@@ -334,7 +321,7 @@ axios.put(`${url}/auth/users/${JSON.parse(
             height: "30px",
             paddingLeft: "12px",
           }}
-          className="allinput"
+          className="allinput firma12b"
         />
       </div>
       <div className="firma7">
@@ -379,7 +366,13 @@ axios.put(`${url}/auth/users/${JSON.parse(
         />
       </div>
       <div className="firma_div2">
-        <button  onClick={()=>{dataPost()}} >Редактировать</button>
+        <button
+          onClick={() => {
+            dataPost();
+          }}
+        >
+          Редактировать
+        </button>
         <button onClick={zakroy} className="firma_butt2">
           Закрыть
         </button>
