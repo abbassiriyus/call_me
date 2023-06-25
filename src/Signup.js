@@ -41,16 +41,11 @@ import logo from "./img/Logo_color 1.png";
 import ReCAPTCHA from "react-google-recaptcha";
 
 function Signup() {
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-  const onChange = (value) => {
-    console.log("reCAPTCHA value:", value);
-    setRecaptchaToken(value);
-  };
 
   function sign() {
     window.location = "/";
   }
-  function scan() {}
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -67,7 +62,7 @@ function Signup() {
           username,
           email,
           password,
-          phone: { phone_number: phone },
+          phone,
           verify_code,
         }
       );
@@ -187,10 +182,7 @@ function Signup() {
             <div className="error_block">
               <p>Не правильно, попробуйте еще раз пожалуйста</p>
             </div>
-            <ReCAPTCHA
-              sitekey="6LdKSMcmAAAAAKsDfc3SuwfDp9r758qYMwWxW24U"
-              onChange={onChange}
-            />
+
             <div className="but">
               <button>Регистрация</button>
               <div className="but2">
