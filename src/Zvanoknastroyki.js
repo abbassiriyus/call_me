@@ -25,11 +25,11 @@ export default function Zvanoknastroyki() {
       localStorage.getItem("getAdmin")
     ).password;
     document.querySelectorAll(".allinput")[4].value = JSON.parse(
-      localStorage.getItem("getAdmin")
-    ).phone;
-    document.querySelectorAll(".allinput")[5].value = JSON.parse(
-      localStorage.getItem("getAdmin")
-    ).organization;
+      localStorage.getItem("phone")
+    );
+    document.querySelectorAll(".allinput")[5].value = (
+      localStorage.getItem("nameCompany")
+    );
     document.querySelectorAll(".allinput")[6].value = JSON.parse(
       localStorage.getItem("getAdmin")
     ).requisite;
@@ -60,7 +60,7 @@ export default function Zvanoknastroyki() {
       username: (document.querySelectorAll(".allinput")[0].value).length > 2?document.querySelectorAll(".allinput")[0].value:null,
       email: (document.querySelectorAll(".allinput")[1].value).includes('@')?document.querySelectorAll(".allinput")[1].value:null,
       social_network: (document.querySelectorAll(".allinput")[2].value).length > 2?document.querySelectorAll(".allinput")[2].value:null,
-      phone: (document.querySelectorAll(".allinput")[4].value).length > 2?document.querySelectorAll(".allinput")[4].value:null,
+      phone: (document.querySelectorAll(".allinput")[4].value*1).length > 2?document.querySelectorAll(".allinput")[4].value:null,
       organization: (document.querySelectorAll(".allinput")[5].value).length > 2?document.querySelectorAll(".allinput")[5].value:null,
       requisite: (document.querySelectorAll(".allinput")[6].value).length > 2?document.querySelectorAll(".allinput")[6].value:null,
       inn: (document.querySelectorAll(".allinput")[7].value).length > 2?document.querySelectorAll(".allinput")[7].value:null,

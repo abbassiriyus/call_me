@@ -11,14 +11,14 @@ function Login() {
     window.location = "/signup";
   }
   function err() {
-    var passitem = JSON.parse(localStorage.getItem("userGet")).password;
+    var passitem = (localStorage.getItem("password"));
     console.log(passitem);
     if (passitem == document.querySelector(".pasvalue").value) {
       document.querySelector(".pasvalue").style = "border: 2px solid #939393";
     } else {
       document.querySelector(".pasvalue").style = "border: 2px solid red";
     }
-    var emeilitem = JSON.parse(localStorage.getItem("userGet")).email;
+    var emeilitem = (localStorage.getItem("email"));
     console.log(emeilitem);
     if (emeilitem == document.querySelector(".input1").value) {
       document.querySelector(".input1").style = "border: 2px solid #939393";

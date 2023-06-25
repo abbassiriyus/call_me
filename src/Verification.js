@@ -6,26 +6,24 @@ import axios from "axios";
 import url from "./host";
 
 const Verification = () => {
-  const [password, setPassword] = useState("");
+  const [value, setValue] = useState('');
 
-  const email2 = localStorage.getItem("email");
-  function sendFanction() {
-    if (password === localStorage.getItem("verefication")) {
-      var formdata = new FormData();
-      console.log(localStorage.getItem("userGet"));
-      formdata.append("email", localStorage.getItem("email"));
-      formdata.append("phone", localStorage.getItem("phone"));
-      formdata.append("username", localStorage.getItem("username"));
-      formdata.append("password", localStorage.getItem("password"));
-      formdata.append("is_verified", true);
-      axios.post(`${url}/auth/register/`, formdata).then((res) => {
-        alert("Ваш код верен! Вы прошли регистрацию!");
-        window.location = "/dashboard";
-      });
-    } else {
+  const handleClick = () => {
+    console.log(value);
+    axios
+    .post(
+      `${url}/auth/register/?verify_code=${value}&email=${email2}`
+    )
+    .then((res) => {
+      alert("Ваш код верен! Вы прошли регистрацию!");
+      window.location = "/";
+    })
+    .catch((err) => {
       alert("Не правильно попробуйте еще раз пожалуйста");
-    }
+    });
   }
+  const email2 = localStorage.getItem("email");
+
   return (
     <div>
       <div className="main2">
@@ -38,17 +36,11 @@ const Verification = () => {
             <span>{email2}</span>
           </div>
           <div className="ms-ver">
-            <VerificationInput
-              onChange={console.log}
-              inputField={{
-                onChange: (e) => {
-                  setPassword(e.nativeEvent.target.value);
-                },
-              }}
-            />
+            <VerificationInput value={value} onChange={setValue} />
           </div>
+
           <div className="ms-btn">
-            <button onClick={() => sendFanction()}>Подтвердить</button>
+            <button onClick={() => handleClick()}>Подтвердить</button>
           </div>
         </div>
       </div>
